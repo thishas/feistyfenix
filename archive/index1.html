@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feisty Fenix - Books & Podcasts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link rel="icon" type="image/x-icon" href="images/icon.jpg">
+    <link rel="icon" type="image/x-icon" href="path/to/icon.ico">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .bungee-spice-regular {
+            font-family: "Bungee Spice", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #35424a;
+            color: white;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+        header h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 2em;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        header nav li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header nav a:hover {
+            color: #e8491d;
+        }
+        #hero {
+            background: #e6e6e6;
+            color: #333;
+            text-align: center;
+            padding: 50px 0;
+        }
+        #hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        #books-podcasts {
+            padding: 30px 0;
+        }
+        .book-podcast-section {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        .book-podcast-section img {
+            width: 200px;
+            margin-right: 20px;
+            border: 1px solid #ddd;
+        }
+        .book-podcast-section h2 {
+            margin-top: 0;
+            color: #e8491d;
+        }
+        .book-podcast-section p {
+            line-height: 1.6em;
+        }
+        .button {
+            background-color: #e8491d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #c73816;
+        }
+        footer {
+            background: #35424a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #35424a;
+            color: #f4f4f4;
+            margin: 10% auto;
+            padding: 40px;
+            border: 2px solid #e8491d;
+            width: 60%;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .modal-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .modal-content p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .modal-content input[type="email"] {
+            padding: 10px;
+            font-size: 1em;
+            width: 80%;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #e8491d;
+        }
+        .modal-content button {
+            background-color: #e8491d;
+            color: #f4f4f4;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .modal-content button:hover {
+            background-color: #f0623b;
+        }
+        .close {
+            color: #f4f4f4;
+        }
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            .container {
+                width: 95%;
+            }
+            .book-podcast-section {
+                flex-direction: column;
+            }
+            .social-icons i {
+                font-size: 24px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="bungee-spice-regular">Feisty Fenix</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Profile</a></li>
+                    <li><a href="contact3.html">Contact</a></li>    
+                    <li><a href="supportAuthor.html">Author Support</a></li>
+                    <li><a href="#" onclick="showNewsletterModal(); return false;">Newsletter</a></li>                
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h1 class="bungee-spice-regular">Dive into the Cyberpunk World of Fenix</h1>
+            <p>Explore a dystopian future where survival is a fight, power is a curse, and one woman must rise to become a legend. Books and Podcasts Coming Soon!</p>
+        </div>
+    </section>
+
+    <section id="books-podcasts">
+        <div class="container">
+            <div class="book-podcast-section">
+                <img src="images/EmberRising.jpg" alt="Ember Rising Book Cover" style="width: 644px; margin-right: 20px;">
+                <div>
+                    <h2 class="bungee-spice-regular">Book 1: Ember Rising</h2>
+                    <p>The Awakening Begins</p>
+                    <p>In the neon-drenched streets of New Luma City, Fenix Rael’s life is forever changed when she stumbles upon The Orb, an alien energy source that fuses with her. Suddenly, she’s hearing whispers, unlocking impossible abilities, and becoming the target of OmniCorp—a ruthless megacorporation experimenting on humans. With the help of Jax, a cybernetically enhanced rogue, Fenix must outrun deadly hybrids, unravel a dark conspiracy, and decide whether to embrace or resist the power inside her.</p>
+                    <p>But in a world where secrets are currency and trust is a luxury, survival may come at a cost she’s not ready to pay.</p>
+                    <a href="#" class="button" onclick="showVideoModal(); return false;">Ember Rising video </a>
+                    <a href="#" class="button" onclick="redirectToPrologue(); return false;">Read Ember Rising Prologue</a>                
+                </div>
+            </div>
+
+            <div class="book-podcast-section">
+                <img src="images/EmberAscended.jpg" alt="Ember Ascended Book Cover" style="width: 644px; margin-right: 20px;">
+                <div>
+                    <h2 class="bungee-spice-regular">Book 2: Ember Ascended</h2>
+                    <p> The Fight Reaches the Stars</p>
+                    <p>After barely escaping OmniCorp’s grasp, Fenix and her team launch an ambitious mission: infiltrate The Apex Station, a space-based facility controlling OmniCorp’s most dangerous experiments. As she battles both her enemies and the alien energy within, Fenix uncovers the horrifying truth—Project Nexus isn’t just about power, it’s about control.</p>
+                    <p>With new allies and unexpected betrayals, the war escalates. As Fenix’s connection to The Core deepens, so does the risk of losing herself. Will she bring down OmniCorp from the inside, or will she become the very thing she’s fighting against?</p>
+                    <!-- <a href="#" class="button">Coming Soon!</a> -->
+                    <span class="button" style="display: inline-block; text-align: center;">Coming Soon!</span>
+                </div>
+            </div>
+
+            <div class="book-podcast-section">
+                <img src="images/EmberReborn.jpg" alt="Ember Reborn Book Cover" style="width: 644px; margin-right: 20px;">
+                <div>
+                    <h2 class="bungee-spice-regular">Book 3: Ember Reborn</h2>
+                    <p> The Reckoning</p>
+                    <p>The battle for freedom ignites as Fenix and her team take the fight directly to OmniCorp’s command center. But the war isn’t just about corporations anymore—something far older and more powerful lurks within The Core. As The Entity Protocol activates, unleashing the next evolution of hybrids, Fenix must face the ultimate choice: sacrifice her humanity or risk letting OmniCorp win.</p>
+                    <p>With The Apex Station falling, Earth in chaos, and the past catching up to her, Fenix will rise—or burn.</p>
+                    <!-- <a href="#" class="button">Coming Soon!</a> -->
+                    <span class="button" style="display: inline-block; text-align: center;">Coming Soon!</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="social-icons" style="text-align: center; margin-bottom: 20px;">
+            <p>Connect With Us</p>
+            <a href="https://bsky.app/profile/feistyfenix.bsky.social">BlueSky</a>
+            <a href="https://www.instagram.com/feistyfenix"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@feistyfenix"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.twitch.tv/feisty_fenix"><i class="fab fa-twitch"></i></a>
+            <a href="https://www.youtube.com/@feistyfenix-i7d"><i class="fab fa-youtube"></i></a>
+            <a href="https://thishas.github.io/portfolio.github.io/">Personal Resume</a>
+        </div>
+    </div>
+
+    <!-- Video Modal size -->
+    <style>
+        .modal-content {
+            max-width: 90%;
+            margin: auto;
+        }
+        video {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeVideoModal()">&times;</span>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jinrS8HUYi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Splash Modal for Newsletter -->
+    <div id="splashModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeNewsletterModal(false)">&times;</span>
+            <h2>Join Our Feisty Email List</h2>
+            <p>Get updates on publication dates and more!</p>
+            <form onsubmit="subscribeEmail(); return false;">
+                <input type="email" id="modalEmailInput" placeholder="Enter your email" required>
+                <button type="submit" class="button">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var player;
+    
+        // Initialize the YouTube player
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('promoVideo', {
+                events: {
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+    
+        // Handle player state changes
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.ENDED) {
+                closeVideoModal();
+                showNewsletterModal();
+            }
+        }
+    
+        // Open the video modal
+        function showVideoModal() {
+            document.getElementById('videoModal').style.display = 'block';
+        }
+    
+        // Close the video modal
+        function closeVideoModal() {
+            document.getElementById('videoModal').style.display = 'none';
+        }
+    
+        // Show the newsletter modal
+        function showNewsletterModal() {
+            document.getElementById('splashModal').style.display = 'block';
+        }
+    
+        // Redirect to ER_Prologue.html
+        function redirectToPrologue() {
+            window.location.href = 'ER_Prologue.html';
+        }
+    
+        // Show the subscribe modal
+        function showSubscribeModal() {
+            document.getElementById('splashModal').style.display = 'block';
+        }
+    
+        // Close the newsletter modal and return to home
+        function closeNewsletterModal(redirect = false) {
+            document.getElementById('splashModal').style.display = 'none';
+            if (redirect) {
+                window.location.href = 'index.html';
+            }
+        }
+    
+        // Handle email subscription
+        function subscribeEmail() {
+            const email = document.getElementById('modalEmailInput').value;
+            const subject = `Subscription Request`;
+            const body = `Please subscribe me to the mailing list. Email: ${email}`;
+            window.location.href = `mailto:FesityMaintenance@gmail.com?subject=${subject}&body=${body}`;
+            closeNewsletterModal(true);
+        }
+
+        // Show splash modal on page load
+        window.onload = function() {
+            showNewsletterModal();
+        }
+    </script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Thisha Smith. All rights reserved. Publisher <a href="https://kushnovels.com/" style="color: inherit;">Kush Novels LLC</a></p>
+        </div>
+    </footer>
+</body>
+</html>
