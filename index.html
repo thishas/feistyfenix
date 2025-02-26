@@ -3,14 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feisty Fenix - Books & Podcasts</title>
+
+    <!-- Meta Title -->
+    <title>Feisty Fenix | Sci-Fi & Cyberpunk Adventures – Get Your Free Read!</title>
+    
+    <!-- Meta Description -->
+    <meta name="description" content="Dive into the thrilling world of Ember Rising! Get a FREE sneak peek of the first chapter and join the rebellion. Sci-Fi | Cyberpunk | Adventure.">
+    
+    <!-- Keywords (Optional) -->
+    <meta name="keywords" content="sci-fi books, cyberpunk, free sci-fi book, Ember Rising, sci-fi adventure, Feisty Fenix, futuristic fiction, action books, AI stories">
+    
+    <!-- Author -->
+    <meta name="author" content="Feisty Fenix, Thisha Smith, Fenix Smith">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://feistyfenix.com/">
+    
+    <!-- Robots Tag -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags for Facebook, LinkedIn -->
+    <meta property="og:title" content="Feisty Fenix | Enter the World of Ember Rising - Free Chapter Inside!">
+    <meta property="og:description" content="A dystopian world. A fierce heroine. An unstoppable power. Get a FREE preview of Ember Rising and uncover the truth behind the whispers.">
+    <meta property="og:image" content="https://feistyfenix.com/images/EmberRising.jpg">
+    <meta property="og:image:alt" content="Ember Rising - Sci-Fi Cyberpunk Book">
+    <meta property="og:url" content="https://feistyfenix.com/">
+    <meta property="og:type" content="book">
+    <meta property="fb:app_id" content="YOUR_FB_APP_ID">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Feisty Fenix | Ember Rising – FREE Sci-Fi Read!">
+    <meta name="twitter:description" content="Sci-Fi meets cyberpunk in Ember Rising. Download your FREE chapter now and join the resistance!">
+    <meta name="twitter:image" content="https://feistyfenix.com/images/EmberRising.jpg">
+    <meta name="twitter:site" content="@FeistyFenix">
+    <meta name="twitter:creator" content="@FeistyFenix">
+    
+    <!-- Favicon -->
+    <!--   <link rel="icon" type="image/png" sizes="32x32" href="https://feistyfenix.com/favicon.png"> -->
+    
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Book",
+          "name": "Ember Rising",
+          "author": {
+            "@type": "Person",
+            "name": "Thisha Smith"
+          },
+          "description": "A dystopian cyberpunk adventure featuring Fenix, a warrior navigating a world of corporate corruption and alien secrets. Get your free chapter now!",
+          "image": "https://feistyfenix.com/images/EmberRising.jpg",
+          "datePublished": "2025-02-24",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Kush Novels LLC"
+          },
+          "isbn": "978-3-16-148410-0",
+          "url": "https://feistyfenix.com/",
+          "inLanguage": "en",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://feistyfenix.com/",
+            "price": "0.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <link rel="icon" type="image/x-icon" href="images/icon.jpg">
-    <link rel="icon" type="image/x-icon" href="path/to/icon.ico">
     
+     <!-- YouTube API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/icon.jpg">
+    
+     <!-- Styles -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -167,9 +239,61 @@
             background-color: #f0623b;
         }
         .close {
-            color: #f4f4f4;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        background-color: transparent;
+        border: none;
+        font-size: 30px;
+        color: #f4f4f4;
+        cursor: pointer;
         }
-        @media (max-width: 768px) {
+        .close:hover {
+            color: #e8491d;
+        }
+
+    /* Default light theme styles */
+    body {
+        background-color: #f4f4f4;
+        color: #333;
+    }
+    header, footer {
+        background-color: #35424a;
+        color: white;
+    }
+    .modal-content {
+        background-color: #35424a;
+        color: #f4f4f4;
+    }
+    .button {
+        background-color: #e8491d;
+        color: white;
+    }
+    /* Dark theme styles */
+    @media (prefers-color-scheme: dark) 
+    {
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        header, footer {
+            background-color: #1f1f1f;
+            color: #e0e0e0;
+        }
+        .modal-content {
+            background-color: #1f1f1f;
+            color: #e0e0e0;
+        }
+        .button {
+            background-color: #bb86fc;
+            color: #121212;
+        }
+    }
+
+
+
+
+    @media (max-width: 768px) {
             header nav ul {
                 flex-direction: column;
                 align-items: center;
@@ -185,8 +309,10 @@
             }
         }
     </style>
+     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
 
     <header>
@@ -226,7 +352,7 @@
             </div>
 
             <div class="book-podcast-section">
-                <img src="images/EmberAscended.jpg" alt="Ember Ascended Book Cover" style="width: 644px; margin-right: 20px;">
+                <img src="images/EmberAscended5.jpg" alt="Ember Ascended Book Cover" style="width: 644px; margin-right: 20px;">
                 <div>
                     <h2 class="bungee-spice-regular">Book 2: Ember Ascended</h2>
                     <p> The Fight Reaches the Stars</p>
@@ -278,8 +404,8 @@
     <!-- Video Modal -->
     <div id="videoModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeVideoModal()">&times;</span>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/jinrS8HUYi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button class="close" onclick="closeVideoModal()">&times;</button>
+            <iframe id="promoVideo" width="560" height="315" src="https://www.youtube.com/embed/jinrS8HUYi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
@@ -318,12 +444,31 @@
     
         // Open the video modal
         function showVideoModal() {
+            const iframe = document.getElementById('promoVideo');
+            iframe.src = 'https://www.youtube.com/embed/jinrS8HUYi8';
             document.getElementById('videoModal').style.display = 'block';
         }
     
         // Close the video modal
         function closeVideoModal() {
             document.getElementById('videoModal').style.display = 'none';
+    
+            // Stop the YouTube video to ensure sound stops
+            if (player && typeof player.stopVideo === 'function') {
+                player.stopVideo();
+            }
+
+            // Clear the iframe source to stop streaming
+            const iframe = document.getElementById('promoVideo');
+            iframe.src = '';
+        }
+    
+        // Show splash modal on page load if not shown before
+        window.onload = function() {
+            if (!localStorage.getItem('splashShown')) {
+                showNewsletterModal();
+                localStorage.setItem('splashShown', 'true');
+            }
         }
     
         // Show the newsletter modal
@@ -345,7 +490,6 @@
         // Close the newsletter modal and redirect
         function closeNewsletterModal(redirect = true) {
             document.getElementById('splashModal').style.display = 'none';
-         
         }
     
         // Handle email subscription
@@ -356,24 +500,6 @@
             window.location.href = `mailto:FesityMaintenance@gmail.com?subject=${subject}&body=${body}`;
             closeNewsletterModal();
         }
-    
-        // Show splash modal on page load if not shown before
-        window.onload = function() {
-            if (!localStorage.getItem('splashShown')) {
-                showNewsletterModal();
-                localStorage.setItem('splashShown', 'true');
-            }
-        }
-
-        // Show splash modal on page load if not shown before
-        window.onload = function() {
-            if (!localStorage.getItem('splashShown')) {
-                showNewsletterModal();
-                localStorage.setItem('splashShown', 'true');
-            }
-        }
-
-
     </script>
 
 
